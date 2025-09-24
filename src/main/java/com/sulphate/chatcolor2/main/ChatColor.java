@@ -217,18 +217,6 @@ public class ChatColor extends JavaPlugin {
     }
 
     private void setupListeners() {
-        EventPriority chatPriority = EventPriority.valueOf(config.getString("settings.event-priority"));
-        chatListener = new ChatListener(configsManager, generalUtils, groupColoursManager, playerDataStore);
-
-        EventExecutor executor = (listener, event) -> {
-            if (listener instanceof ChatListener && event instanceof AsyncPlayerChatEvent) {
-                ((ChatListener) listener).onEvent((AsyncPlayerChatEvent) event);
-            }
-        };
-
-        // Attempt to register
-        manager.registerEvent(AsyncPlayerChatEvent.class, chatListener, chatPriority, executor, this);
-
         joinListener = new PlayerJoinListener(
                 M, configsManager, generalUtils, customColoursManager, groupColoursManager, playerDataStore
         );

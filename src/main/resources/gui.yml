@@ -34,7 +34,6 @@ config:
   filler-item-material: LIGHT_BLUE_STAINED_GLASS_PANE
 
   no-permission-item:
-    # Set to COPY to keep the original item
     material: BARRIER
     lore:
       - ''
@@ -51,7 +50,7 @@ config:
     unselected-material: GRAY_DYE
 
 main:
-  title: '%iceColor Picker GUI'
+  title: '&g[#76cdff,#005ed9,#76cdff]Color Picker GUI'
   size: 45
   fill-empty-slots: true
   inventory-type: STATIC
@@ -137,10 +136,16 @@ main:
       data: f
       material: WHITE_CONCRETE
 
+    36:
+      type: INVENTORY
+      data: custom
+      name: '&6View Custom Colors'
+      material: PLAYER_HEAD
+      head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjOTZhNWMzZDEzYzMxOTkxODNlMWJjN2YwODZmNTRjYTJhNjUyNzEyNjMwM2FjOGUyNWQ2M2UxNmI2NGNjZiJ9fX0='
+
     29:
       type: MODIFIER
       data: k
-      name: '&f&kO&rObfuscated&f&kO'
 
     30:
       type: MODIFIER
@@ -158,18 +163,6 @@ main:
       type: MODIFIER
       data: o
 
-    36:
-      type: INVENTORY
-      data: custom
-      name: '&6View Custom Colors'
-      material: PLAYER_HEAD
-      head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjOTZhNWMzZDEzYzMxOTkxODNlMWJjN2YwODZmNTRjYTJhNjUyNzEyNjMwM2FjOGUyNWQ2M2UxNmI2NGNjZiJ9fX0='
-
-    40:
-      type: COLOUR
-      data: default
-      material: WHITE_DYE
-
     44:
       type: INVENTORY
       data: hex
@@ -178,7 +171,7 @@ main:
       head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzMzYWU4ZGU3ZWQwNzllMzhkMmM4MmRkNDJiNzRjZmNiZDk0YjM0ODAzNDhkYmI1ZWNkOTNkYThiODEwMTVlMyJ9fX0='
 
 hex:
-  title: '%hotHex Colors'
+  title: '&g[#f59141,#ff4b29,#f5b72f]Hex Colors'
   size: 36
   fill-empty-slots: true
   inventory-type: STATIC
@@ -276,7 +269,7 @@ hex:
       head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjOTZhNWMzZDEzYzMxOTkxODNlMWJjN2YwODZmNTRjYTJhNjUyNzEyNjMwM2FjOGUyNWQ2M2UxNmI2NGNjZiJ9fX0='
 
 custom:
-  title: '%vibrant-rainbow-gradientCustom Colors'
+  title: '&g[#ff0000,#ffa500,#ffff00,#008000,#0000ff,#4b0082,#ee82ee]Custom Colors'
   size: 36
   fill-empty-slots: false
   inventory-type: DYNAMIC
@@ -314,29 +307,34 @@ custom:
 
     12:
       type: COLOUR
+      name: '&u[a,b,c,d,e]Bright Rainbow'
       data: '%bright-rainbow'
       material: PLAYER_HEAD
       head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg3ZmQyM2E3ODM2OWJkMzg3NWRhODg5NmYxNTBjNGFmOWYyMzM3NGUwNDhlMzA5MTM5MDBlM2ZkZDc3ODU5YSJ9fX0='
 
     13:
       type: COLOUR
+      name: '&g[#ffadad,#ffd6a5,#fdffb6,#caffbf,#9bf6ff,#a0c4ff,#bdb2ff,#ffc6ff]Pastel Rainbow'
       data: '%pastel-rainbow'
       material: PLAYER_HEAD
       head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzM1NzdkYWM0M2Y0YmQ4YmY0MGJlODczNDJlMmYxNTc2YmViYmRiZjg2ZDdjYmYzYzZiZTY1ZDQ5MjcwOTVjNSJ9fX0='
 
     14:
       type: COLOUR
+      name: '&u[#5da7ee,#3574ff,#1b3cff,#3574ff]Blue Rainbow'
       data: '%blue-rainbow'
       material: PLAYER_HEAD
       head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2EzNzRlODg1MjA4MmI3MTRlOTQ4OTdhZDY2YzY2ZjAzMGU3Mjg5NDdjMDA3OWJjMTg5YjM4ZWM1ZTVjOWIwMSJ9fX0='
 
     15:
       type: COLOUR
+      name: '&g[#ffbc68,#ff9364,#ff6878,#ef67b3,#d046f5]Sunset'
       data: '%sunset'
       material: ORANGE_GLAZED_TERRACOTTA
 
     16:
       type: COLOUR
+      name: '&g[#f2c6de,#f874ff,#f6c0ff,#ff68e8]Cherry Blossom'
       data: '%cherry-blossom'
       material: CHERRY_LEAVES
 
@@ -348,38 +346,45 @@ custom:
 
     19:
       type: COLOUR
+      name: '&g[#76cdff,#005ed9,#76cdff]Ice'
       data: '%ice'
       material: ICE
 
     20:
       type: COLOUR
+      name: '&g[#f59141,#ff4b29,#f5b72f]Hot'
       data: '%hot'
       material: MAGMA_BLOCK
 
     21:
       type: COLOUR
+      name: '&g[#ff1b1b,#ff1b1b,#ff7c7c]Rose'
       data: '%rose'
       material: ROSE_BUSH
 
     22:
       type: COLOUR
+      name: '&g[#ff0000,#ffa500,#ffff00,#008000,#0000ff,#4b0082,#ee82ee]Vibrant Rainbow'
       data: '%vibrant-rainbow-gradient'
       material: PLAYER_HEAD
       head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFmZTI3YTEzYzVmYzE3NTE1Y2FlNjk1ODUyNzE2MzI2YjJiNWRmNDdkOGQ2Yjk1YTc4OWFlMzhjYWM3YjEifX19'
 
     23:
       type: COLOUR
+      name: '&g[#ffadad,#ffd6a5,#fdffb6,#caffbf,#9bf6ff,#a0c4ff,#bdb2ff,#ffc6ff]Pastel Rainbow'
       data: '%pastel-rainbow-gradient'
       material: PLAYER_HEAD
       head-data: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzM1NzdkYWM0M2Y0YmQ4YmY0MGJlODczNDJlMmYxNTc2YmViYmRiZjg2ZDdjYmYzYzZiZTY1ZDQ5MjcwOTVjNSJ9fX0='
 
     24:
       type: COLOUR
+      name: '&g[#00d728,#795d31,#644a22]Earth'
       data: '%earth'
       material: 'GRASS_BLOCK'
 
     25:
       type: COLOUR
+      name: '&g[#763bbc,#2e7dc4,#d758d4]Magic'
       data: '%magic'
       material: 'NETHER_STAR'
 
