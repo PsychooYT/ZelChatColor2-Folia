@@ -8,6 +8,7 @@ import com.sulphate.chatcolor2.managers.CustomColoursManager;
 import com.sulphate.chatcolor2.managers.GroupColoursManager;
 import com.sulphate.chatcolor2.utils.Config;
 import com.sulphate.chatcolor2.utils.GeneralUtils;
+import com.sulphate.chatcolor2.utils.Messages;
 import com.sulphate.chatcolor2.utils.Reloadable;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -15,8 +16,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-
-import com.sulphate.chatcolor2.utils.Messages;
 
 import java.util.UUID;
 

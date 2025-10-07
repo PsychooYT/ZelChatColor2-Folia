@@ -1,10 +1,8 @@
 package com.sulphate.chatcolor2.data;
 
-import com.sulphate.chatcolor2.commands.Setting;
 import com.sulphate.chatcolor2.main.ChatColor;
 import com.sulphate.chatcolor2.managers.ConfigsManager;
 import com.sulphate.chatcolor2.schedulers.AutoSaveScheduler;
-import com.sulphate.chatcolor2.utils.Config;
 import com.sulphate.chatcolor2.utils.GeneralUtils;
 import com.sulphate.chatcolor2.utils.Messages;
 import org.bukkit.configuration.file.YamlConfiguration;

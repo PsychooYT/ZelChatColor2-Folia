@@ -1,9 +1,9 @@
 package com.sulphate.chatcolor2.listeners;
 
-import com.sulphate.chatcolor2.data.PlayerData;
-import com.sulphate.chatcolor2.event.ChatColorEvent;
 import com.sulphate.chatcolor2.commands.Setting;
+import com.sulphate.chatcolor2.data.PlayerData;
 import com.sulphate.chatcolor2.data.PlayerDataStore;
+import com.sulphate.chatcolor2.event.ChatColorEvent;
 import com.sulphate.chatcolor2.managers.ConfigsManager;
 import com.sulphate.chatcolor2.managers.GroupColoursManager;
 import com.sulphate.chatcolor2.utils.Config;

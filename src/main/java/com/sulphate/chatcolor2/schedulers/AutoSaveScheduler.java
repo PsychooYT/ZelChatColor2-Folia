@@ -2,9 +2,9 @@ package com.sulphate.chatcolor2.schedulers;
 
 import com.sulphate.chatcolor2.main.ChatColor;
 import com.sulphate.chatcolor2.utils.GeneralUtils;
+import io.papermc.paper.threadedregions.scheduler.ScheduledTask;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.scheduler.BukkitTask;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class AutoSaveScheduler {
 
     private final ChatColor plugin;
 
-    private BukkitTask task;
+    private ScheduledTask task;
     private final ConcurrentHashMap<String, YamlConfiguration> configsToSave;
     private int saveInterval;
 
@@ -27,7 +27,7 @@ public class AutoSaveScheduler {
     }
 
     private void run() {
-        task = Bukkit.getScheduler().runTaskTimer(plugin, this::saveAllConfigs, (long) saveInterval * 20 * 60, (long) saveInterval * 20 * 60);
+        this.task = Bukkit.getGlobalRegionScheduler().runAtFixedRate(plugin, task -> AutoSaveScheduler.this.saveAllConfigs(), (long) saveInterval * 20 * 60, (long) saveInterval * 20 * 60);
     }
 
     public void setSaveInterval(int saveInterval) {

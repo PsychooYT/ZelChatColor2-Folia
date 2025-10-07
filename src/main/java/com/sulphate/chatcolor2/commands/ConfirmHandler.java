@@ -2,20 +2,19 @@ package com.sulphate.chatcolor2.commands;
 
 import com.sulphate.chatcolor2.data.PlayerDataStore;
 import com.sulphate.chatcolor2.data.YamlStorageImpl;
+import com.sulphate.chatcolor2.gui.GuiManager;
 import com.sulphate.chatcolor2.main.ChatColor;
 import com.sulphate.chatcolor2.managers.ConfigsManager;
 import com.sulphate.chatcolor2.managers.ConfirmationsManager;
 import com.sulphate.chatcolor2.managers.CustomColoursManager;
-import com.sulphate.chatcolor2.gui.GuiManager;
+import com.sulphate.chatcolor2.schedulers.ConfirmScheduler;
 import com.sulphate.chatcolor2.utils.Config;
 import com.sulphate.chatcolor2.utils.GeneralUtils;
+import com.sulphate.chatcolor2.utils.Messages;
 import com.sulphate.chatcolor2.utils.Reloadable;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-
-import com.sulphate.chatcolor2.schedulers.ConfirmScheduler;
-import com.sulphate.chatcolor2.utils.Messages;
 
 public class ConfirmHandler extends Handler implements Reloadable {
 

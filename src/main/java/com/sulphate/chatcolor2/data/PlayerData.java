@@ -1,6 +1,9 @@
 package com.sulphate.chatcolor2.data;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class PlayerData {

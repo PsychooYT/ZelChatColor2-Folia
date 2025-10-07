@@ -31,7 +31,7 @@ public class SqlStorageImpl extends PlayerDataStore {
     }
 
     private void runAsync(Runnable runnable) {
-        Bukkit.getScheduler().runTaskAsynchronously(ChatColor.getPlugin(), runnable);
+        Bukkit.getAsyncScheduler().runNow(ChatColor.getPlugin(), task -> runnable.run());
     }
 
     private boolean initialiseDatabase() {

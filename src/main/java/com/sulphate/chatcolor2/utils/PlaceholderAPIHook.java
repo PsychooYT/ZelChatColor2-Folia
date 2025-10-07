@@ -8,9 +8,9 @@ import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class PlaceholderAPIHook extends PlaceholderExpansion {
 
@@ -60,6 +60,7 @@ public class PlaceholderAPIHook extends PlaceholderExpansion {
 
     @Override
     public String onPlaceholderRequest(Player player, @NotNull String identifier) {
+
         // Ignore if player is null.
         if (player == null) {
             return "";
@@ -69,7 +70,7 @@ public class PlaceholderAPIHook extends PlaceholderExpansion {
         String colour = dataStore.getColour(uuid);
         boolean isCustomColour = GeneralUtils.isCustomColour(colour);
 
-        switch (identifier.toLowerCase()) {
+        switch (identifier) {
             case "full_color": {
                 // Return the player's full colour, including modifiers. Does not work for rainbow/gradient colours!
                 if (isCustomColour) {
@@ -95,7 +96,14 @@ public class PlaceholderAPIHook extends PlaceholderExpansion {
                     colour = customColoursManager.getCustomColour(colour);
                 }
 
-                return colour;
+                // Remove any modifiers (start index = second & symbol).
+                int modifiersStartIndex = (colour.substring(1).indexOf("&"));
+
+                if (modifiersStartIndex != -1) {
+                    colour = colour.substring(0, modifiersStartIndex + 1);
+                }
+
+                return GeneralUtils.colourise(colour);
             }
 
             case "color_name": {

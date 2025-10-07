@@ -1,6 +1,5 @@
 package com.sulphate.chatcolor2.managers;
 
-import com.sulphate.chatcolor2.main.ChatColor;
 import com.sulphate.chatcolor2.utils.CompatabilityUtils;
 import com.sulphate.chatcolor2.utils.Config;
 import com.sulphate.chatcolor2.utils.ConfigUtils;

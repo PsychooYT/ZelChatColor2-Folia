@@ -9,8 +9,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-import org.bukkit.permissions.Permission;
-import org.bukkit.permissions.PermissionDefault;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -138,16 +136,10 @@ public class GeneralUtils implements Reloadable {
         // Replace hex colour codes with the correct hex colour(s).
         Pattern hexPattern = Pattern.compile("&#[A-Fa-f0-9]{6}");
         Matcher matcher = hexPattern.matcher(partial);
-
         StringBuffer result = new StringBuffer();
 
         while (matcher.find()) {
             matcher.appendReplacement(result, createHexColour(matcher.group()));
-            matcher.appendTail(result);
-        }
-
-        if (result.length() > 0) {
-            partial = result.toString();
         }
 
         return ChatColor.translateAlternateColorCodes('&', partial);
